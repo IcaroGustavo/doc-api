@@ -1,0 +1,34 @@
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# IDE / Editor
+.idea/
+.vscode/
+.DS_Store
+
+# Envs / secrets
+.env
+.env.*
+
+# Byte-compiled / compiled / build
+build/
+dist/
+*.egg-info/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Cursor / tooling
+.cursor/
+

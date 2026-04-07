@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>{{ portal_name }}</title>
+	<link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}" />
+</head>
+<body>
+	<header class="ff-header">
+		<div class="ff-header__brand">
+			<div class="ff-logo">FF</div>
+			<h1 class="ff-title">{{ portal_name }}</h1>
+		</div>
+		<div class="ff-header__meta">
+			<span class="ff-badge">White Label</span>
+		</div>
+	</header>
+
+	<main class="ff-container">
+		<section class="ff-intro">
+			<h2>Catálogo de APIs</h2>
+			<p>Centralize a descoberta e consulta de documentação OpenAPI dos seus microsserviços.</p>
+		</section>
+
+		<section class="ff-grid">
+			{% for api in apis %}
+			<article class="ff-card">
+				<div class="ff-card__header">
+					<h3 class="ff-card__title">{{ api.info.title }}</h3>
+					<span class="ff-chip">v{{ api.info.version }}</span>
+				</div>
+				<p class="ff-card__desc">{{ api.info.description }}</p>
+				<div class="ff-card__paths">
+					<h4>Endpoints</h4>
+					<ul>
+						{% for path, methods in api.paths.items() %}
+							<li>
+								<code>{{ path }}</code>
+								<span class="ff-methods">
+									{% for method, meta in methods.items() %}
+										<span class="ff-method ff-method--{{ method|lower }}">{{ method|upper }}</span>
+									{% endfor %}
+								</span>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="ff-card__actions">
+					<a class="ff-button" href="{{ url_for('swagger_ui_html') if false else '/docs' }}" title="Abrir Swagger UI">Ver Swagger</a>
+					<a class="ff-link" href="/redoc" title="Abrir Redoc">Abrir Redoc</a>
+				</div>
+			</article>
+			{% endfor %}
+		</section>
+	</main>
+
+	<footer class="ff-footer">
+		<p>Exemplo educativo. Nenhuma API real é exposta.</p>
+	</footer>
+</body>
+</html>
+
