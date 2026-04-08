@@ -1,6 +1,6 @@
 # FinFlow API Portal (White Label) — Centralizador de Documentação
 
-Portal genérico (white label) para centralizar a documentação OpenAPI de múltiplos microsserviços. Ideal para portfólio e demonstrações em entrevistas, sem expor endpoints ou domínios reais.
+Portal genérico (white label) para centralizar a documentação OpenAPI de múltiplos microsserviços. Sem expor endpoints ou domínios reais.
 
 ## Problema
 > A empresa possuía diversos microsserviços descentralizados, forçando os desenvolvedores a buscarem a documentação (Swagger) de cada um em URLs diferentes.
