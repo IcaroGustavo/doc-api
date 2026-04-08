@@ -68,5 +68,15 @@ Observação: este é um projeto demonstrativo. Nenhuma API real é consultada; 
 - Pydantic para tipagem/validação do schema interno antes de gerar dicionários.
 - UI minimalista, porém escalável: fácil integrar links reais de Swagger/Redoc futuramente.
 
+
+<img width="1891" height="865" alt="image" src="https://github.com/user-attachments/assets/6ab4a53b-794e-4503-9d71-56a6c789d961" />
+
+<img width="1893" height="775" alt="image" src="https://github.com/user-attachments/assets/76ba44c5-bc55-4762-80bb-14f3442b10f3" />
+
+<img width="1883" height="860" alt="image" src="https://github.com/user-attachments/assets/8c67e516-528f-4be9-ab41-c4306bdf2bec" />
+
+
+
+
 ---
 Feito com FastAPI e carinho para melhorar a DX.
