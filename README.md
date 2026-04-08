@@ -68,11 +68,5 @@ Observação: este é um projeto demonstrativo. Nenhuma API real é consultada; 
 - Pydantic para tipagem/validação do schema interno antes de gerar dicionários.
 - UI minimalista, porém escalável: fácil integrar links reais de Swagger/Redoc futuramente.
 
-## Próximos passos (idéias)
-- Adicionar filtros por domínio (ex.: Pagamentos, Identidade).
-- Paginação/agrupamento quando houver muitas APIs.
-- Integração com autenticação corporativa (SSO).
-- Cache de schemas para reduzir latência.
-
 ---
 Feito com FastAPI e carinho para melhorar a DX.
